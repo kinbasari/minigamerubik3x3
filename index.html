@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Happy+Monkey&family=Kavoon&family=Miltonian+Tattoo&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Rum+Raisin&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kinbasari/minigameguesscolor/styles/mystyle.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kinbasari/minigameguesscolor/styles/popup.css">
+  <link rel="stylesheet" href="styles/style.css">
+  <title>Mini Game Rubik 3x3</title>
+
+</head>
+<body>
+    <nav class="navbar" x-data>
+  <a href="#" class="navbar-logo"><span>Kin</span>Basari</a>
+  <div class="navbar-nav">
+</div>
+</nav>
+<h1 style="color: transparant;"></h1>
+<p></p><br>
+  <h1>Rubik<span>3x3</span></h1>
+  <div class="rubik-container" id="rubik-container"></div>
+  <div class="controls">
+    <button onclick="rotateFace('U'); playButtonSound();">Up</button>
+    <button onclick="rotateFace('F'); playButtonSound();">Front</button>
+    <button onclick="rotateFace('R'); playButtonSound();">Right</button>
+    <button onclick="rotateFace('D'); playButtonSound();">Down</button>
+    <button onclick="rotateFace('B'); playButtonSound();">Back</button>
+    <button onclick="rotateFace('L'); playButtonSound();">Left</button>
+  </div>
+    <button onclick="shuffleRubik(); playButtonSound();" class="shufflebtn">Shuffle</button>
+  
+  <audio src="sound/endgame.mp3" id="win-sound"></audio>
+  
+  <!-- Pop up -->
+  <div class="popup-overlay" id="popup">
+ <div class="popup-content">
+ <button onclick="closePopup()" class="close-popup">Start</button>
+ <h2>Aturan Permainan</h2>
+ <p></p>
+
+ <hr>
+ <div class="popup-paragraph">
+<span>Tujuan permainan: </span>user harus mengacak posisi warna dengan cara mengklik tombol shuffle lalu menyusun kembali sehingga setiap sisi memiliki satu warna solid.
+<!-- <br><span>Komponen: </span><b>Pusat (Center): </b>Kotak tengah pada setiap sisi. Warnanya tetap di tempatnya dan menjadi patokan sisi tersebut. <b>Tepi (Edge): </b>Potongan dengan dua warna. <b>Sudut (Corner): </b>Potongan dengan tiga warna. -->
+<br><span>Gerakan wajah: </span>Setiap sisi memiliki notasi tertentu: Up sisi atas, Down sisi bawah, Left sisi kiri, Right sisi kanan, Front sisi depan, dan Back sisi belakang.
+<br><span>Cara Bermain: </span>Terdapat ada 6 tombol buton dan ekstra tombol shuffle, Gunakan tombol button untuk memutar setiap sisi yang ada.
+<br><span>1. Up </span>digunakan untuk memutar sisi atas.
+<br><span>2. Down </span>digunakan untuk memutar sisi bawah.
+<br><span>3. Front </span>digunakan untuk memutar sisi depan.
+<br><span>4. Back </span>digunakan untuk memutar sisi belakang.
+<br><span>5. Right </span>digunakan untuk memutar sisi kanan.
+<br><span>6. Left </span>digunakan untuk memutar sisi kiri.
+<br><i style="font-size: 12px;">(semua tombol dapat digunakan untuk memutar 90° searah jarum jam)</i>
+<br><span>7. Shuffle </span>digunakan untuk memutar dan mengacak setiap sisi.
+<p></p><br>
+<p class="end-prg" style="font-size: 13px;">Selamat bermain dan semoga dapat meningkatkan kecerdasan dan daya ingat dalam berfikir.</p>
+</div>
+ </div>
+</div>
+
+
+  <script src="scripts/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/kinbasari/minigameguesscolor/scripts/popup.js"></script>
+</body>
+</html>
