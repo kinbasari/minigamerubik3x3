@@ -21,16 +21,17 @@
   <h1>Rubik<span>3x3</span></h1>
   <div class="rubik-container" id="rubik-container"></div>
   <div class="controls">
-    <button onclick="rotateFace('U'); playButtonSound();">Up</button>
-    <button onclick="rotateFace('F'); playButtonSound();">Front</button>
-    <button onclick="rotateFace('R'); playButtonSound();">Right</button>
-    <button onclick="rotateFace('D'); playButtonSound();">Down</button>
-    <button onclick="rotateFace('B'); playButtonSound();">Back</button>
-    <button onclick="rotateFace('L'); playButtonSound();">Left</button>
+    <button class="play-pressbtn" onclick="rotateFace('U'); playButtonSound();">Up</button>
+    <button class="play-pressbtn" onclick="rotateFace('F'); playButtonSound();">Front</button>
+    <button class="play-pressbtn" onclick="rotateFace('R'); playButtonSound();">Right</button>
+    <button class="play-pressbtn" onclick="rotateFace('D'); playButtonSound();">Down</button>
+    <button class="play-pressbtn" onclick="rotateFace('B'); playButtonSound();">Back</button>
+    <button class="play-pressbtn" onclick="rotateFace('L'); playButtonSound();">Left</button>
   </div>
     <button onclick="shuffleRubik(); playButtonSound();" class="shufflebtn">Shuffle</button>
   
   <audio src="sound/endgame.mp3" id="win-sound"></audio>
+  <audio id="buttonSound" src="sound/pressbtn.mp3"></audio>
   
   <!-- Pop up -->
   <div class="popup-overlay" id="popup">
